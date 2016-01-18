@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Ubermelon Order Form</title>
+    </head>
+    <body>
+        <h1>Order!</h1>
+        <table>
+            <tr>
+                <th>Melon Name</th>
+                <th>Price per lb</th>
+            </tr>
+            <tr>
+                <td>Watermelon</td>
+                <td>$1.59</td>
+            </tr>
+            <tr>
+                <td>Honeydew</td>
+                <td>$0.99</td>
+            </tr>
+            <tr>
+                <td>Cantaloupe</td>
+                <td>$1.29</td>
+            </tr>
+            <tr>
+                <td>Crenshaw</td>
+                <td>$2.19</td>
+            </tr>
+            <tr>
+                <td>Canary</td>
+                <td>$11.99</td>
+            </tr>
+        </table>
+        <br>
+        <p>Place your orders here! You know you want to.</p>
+        <form action="https://ubermelon-order-form.herokuapp.com/process" method="GET">
+            <label>First Name:
+                <input type="text" name="firstname">
+            </label>
+            <br>
+            <label>Last Name:
+                <input type="text" name="lastname">
+            </label> 
+            <br>
+            <label>Select Melon Type
+                <select name="melontype">
+                    <option value="watermelon">Watermelon</option>
+                    <option value="honeydew">Honeydew</option>
+                    <option value="cantaloupe">Cantaloupe</option>
+                    <option value="crenshaw">Crenshaw</option>
+                    <option value="canary">Canary</option>
+                </select>
+            </label>
+            <br>
+            <label>Quantity*:
+                <input type="text" name="quantity">
+            </label>
+            <br>
+            <label>Delivery Time:</label>
+                <label><input type="radio" name="time" value="am">AM</label>
+                <label><input type="radio" name="time" value="pm">PM</label>
+                <label><input type="radio" name="time" value="wat">WAT</label>
+            <br>
+            <label>Returning Customer:</label>
+                <label><input type="radio" name="returning-customer" value="yes">Yes</label>
+                <label><input type="radio" name="returning-customer" value="no">No</label>
+            <br>
+            <label>Statistics:</label>
+                <label><input type="checkbox" name="statistics" value="dog">Dog</label>
+                <label><input type="checkbox" name="statistics" value="cat">Cat</label>
+                <label><input type="checkbox" name="statistics" value="hedgehog">Hedgehog</label>
+                <label><input type="checkbox" name="statistics" value="balloonicorn">Balloonicorn</label>
+                <label><input type="checkbox" name="statistics" value="yak">Yak</label>
+            <br> <br>
+            <label>Submit Order <input type="submit" value="submit"></label>
+        </form>
+    </body>
+    <br>
+    <footer>
+        *Quantities given are by the flat.
+    </footer>
+</html>
